@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This in JS</title>
+</head>
+
+<body>
+  <h1>This is not confusing anymore.</h1>
+  <p onclick="this.innerText = 'You click on me'">This is paragraph. You please not click me.</p>
+  <script>
+    const myObj = {
+      name: 'Rakib Ali',
+      getFullName: function() {
+        return 'Mr ' + this.name;
+      }
+    };
+
+    const anotherObj = {
+      name: 'Rupom Ali'
+    };
+
+    // anotherObj.getFullName = myObj.getFullName;
+
+    // console.log(myObj.getFullName());
+    // console.log(anotherObj.getFullName());
+
+    function add(num1, num2) {
+      console.log(this);
+      return num1 + num2;
+    }
+
+    add(1, 2);
+  </script>
+</body>
+
+</html>
